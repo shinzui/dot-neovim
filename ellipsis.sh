@@ -11,15 +11,18 @@ pkg.install() {
   brew install python3
   pip2 install neovim --upgrade --user
   pip3 install neovim --upgrade
+  gem install neovim
 
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 pkg.link() {
-  readonly files=(init.vim)
+  readonly files=(init.vim bundles.vim)
 
   for file in "${files[@]}"; do
     echo "${file}"
-    fs.link_rfile "${file}" ~/.config/neovim/init.vim
+    fs.link_rfile "${file}" ~/.config/nvim/"${file}"
   done
 }
 
@@ -27,9 +30,12 @@ pkg.link() {
 #     git.push
 # }
 
-# pkg.pull() {
-#     git.pull
-# }
+pkg.pull() {
+  git.pull
+
+  pip install -U neovim
+  gem update neovim
+}
 
 # pkg.installed() {
 #     git.status
