@@ -33,6 +33,8 @@ pkg.link() {
 pkg.pull() {
   git.pull
 
+  brew update
+  brew upgrade neovim
   pip install -U neovim
   gem update neovim
 }
