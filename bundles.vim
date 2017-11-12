@@ -8,4 +8,7 @@ Plug 'cocopon/iceberg.vim'
 "Navigation
 Plug 'easymotion/vim-easymotion'
 
+"Copying & Pasting
+Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
+
 call plug#end()

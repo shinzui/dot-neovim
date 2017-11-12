@@ -106,6 +106,10 @@ map ;j <Plug>(easymotion-j)
 map ;k <Plug>(easymotion-k)
 map ;l <Plug>(easymotion-lineforward)
 
+""vim-operator-flashy
+map y <Plug>(operator-flashy)
+nmap Y <Plug>(operator-flashy)$
+
 
 """Completions
 
