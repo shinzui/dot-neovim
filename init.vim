@@ -110,6 +110,14 @@ map ;l <Plug>(easymotion-lineforward)
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
+""is.vim & vim-asterisk
+map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
+map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
+map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
+map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
+
+let g:asterisk#keeppos = 1
+
 
 """Completions
 
