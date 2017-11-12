@@ -75,7 +75,36 @@ set termguicolors
 colorscheme iceberg
 
 
+"""Bindings
+
+"remap Leader
+let mapleader = "\<Space>"
+
+
 """Plugins
+
+""easymotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+vmap s <Plug>(easymotion-s2)
+omap z <Plug>(easymotion-s2)
+omap f <Plug>(easymotion-bd-fl)
+
+" smart f and t
+omap f <Plug>(easymotion-bd-fl)
+xmap f <Plug>(easymotion-bd-fl)
+omap F <Plug>(easymotion-Fl)
+xmap F <Plug>(easymotion-Fl)
+omap t <Plug>(easymotion-tl)
+xmap t <Plug>(easymotion-tl)
+omap T <Plug>(easymotion-Tl)
+xmap T <Plug>(easymotion-Tl)
+
+" hjkl
+map ;h <Plug>(easymotion-linebackward)
+map ;j <Plug>(easymotion-j)
+map ;k <Plug>(easymotion-k)
+map ;l <Plug>(easymotion-lineforward)
 
 
 """Completions
