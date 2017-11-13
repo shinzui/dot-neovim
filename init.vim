@@ -83,6 +83,13 @@ let mapleader = "\<Space>"
 
 """Plugins
 
+""fzf
+let g:fzf_layout = { 'window': '10split enew' }
+nnoremap <silent> <C-t> :Files<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>l :BLines<CR>
+
+
 ""easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 nmap <Leader>s <Plug>(easymotion-overwin-f2)
