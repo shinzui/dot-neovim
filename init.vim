@@ -118,6 +118,10 @@ map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
 
 let g:asterisk#keeppos = 1
 
+""vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='iceberg'
+
 
 """Completions
 

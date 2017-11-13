@@ -15,4 +15,9 @@ Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
 Plug 'haya14busa/is.vim'
 Plug 'haya14busa/vim-asterisk'
 
+
+"Utilities
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+
+
 call plug#end()
