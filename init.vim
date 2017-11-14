@@ -65,7 +65,6 @@ set autoread
 " Do not force writing modified files to switch buffers
 set hidden
 
-
 let g:python2_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
@@ -74,12 +73,13 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 set termguicolors
 colorscheme iceberg
 
-
 """Bindings
 
 "remap Leader
 let mapleader = "\<Space>"
 
+"Strip all trailing whitespace
+nnoremap <leader>W :%!git stripspace<CR>
 
 """Plugins
 
@@ -88,7 +88,6 @@ let g:fzf_layout = { 'window': '10split enew' }
 nnoremap <silent> <C-t> :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>l :BLines<CR>
-
 
 ""easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -128,7 +127,6 @@ let g:asterisk#keeppos = 1
 ""vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='iceberg'
-
 
 """Completions
 
