@@ -25,6 +25,11 @@ Plug 'sbdchd/neoformat'
 "Linting
 Plug 'w0rp/ale'
 
+"git
+Plug 'tpope/vim-fugitive' | Plug 'junegunn/gv.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'lambdalisue/gina.vim'
+
 "JavaScript
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
