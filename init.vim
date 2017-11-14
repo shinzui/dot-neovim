@@ -75,6 +75,12 @@ colorscheme iceberg
 
 """Bindings
 
+"Windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 "remap Leader
 let mapleader = "\<Space>"
 
