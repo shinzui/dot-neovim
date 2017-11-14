@@ -20,6 +20,11 @@
 [easymotion](https://github.com/easymotion/vim-easymotion)
 
 
+### Development
+
+[ale](https://github.com/w0rp/ale) Asynchronous Lint Engine
+
+
 
 ### Search
 

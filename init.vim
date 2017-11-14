@@ -142,6 +142,10 @@ autocmd filetype javascript set formatprg=prettier\ --stdin\ --single-quote\ --p
 autocmd filetype javascript.jsx set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
 let g:neoformat_try_formatprg = 1
 
+"ale
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
 
 """Completions
 
