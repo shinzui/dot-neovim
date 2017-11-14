@@ -26,4 +26,33 @@ Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascri
 Plug 'elzr/vim-json'
 Plug 'gutenye/json5.vim'
 
+"Web development
+Plug 'mattn/emmet-vim'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax' "css
+
+"react
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascript.jsx']}
+
+"graphql
+Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
+
+"handlebars
+Plug 'mustache/vim-mustache-handlebars'
+
+"mjml
+Plug 'amadeus/vim-mjml'
+
+"TOML
+Plug 'cespare/vim-toml'
+
+"Protocol Buffers
+Plug 'uarun/vim-protobuf'
+
+"Adds :Terraform command to run terraform. Also sets up *.tf, *.tfvars, and
+"*.tfstate files to be highlighted
+Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
+
+
 call plug#end()
