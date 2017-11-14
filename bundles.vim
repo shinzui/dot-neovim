@@ -19,6 +19,9 @@ Plug 'haya14busa/vim-asterisk'
 "Utilities
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
+"Formatting
+Plug 'sbdchd/neoformat'
+
 "JavaScript
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }

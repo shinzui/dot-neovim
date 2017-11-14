@@ -135,6 +135,14 @@ let g:asterisk#keeppos = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='iceberg'
 
+""neoformat
+autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.jsx Neoformat
+autocmd filetype javascript set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
+autocmd filetype javascript.jsx set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
+let g:neoformat_try_formatprg = 1
+
+
 """Completions
 
 " Use deoplete.
