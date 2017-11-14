@@ -19,4 +19,11 @@ Plug 'haya14busa/vim-asterisk'
 "Utilities
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 
+"JavaScript
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'elzr/vim-json'
+Plug 'gutenye/json5.vim'
+
 call plug#end()
