@@ -37,6 +37,10 @@ pkg.pull() {
   brew upgrade neovim
   pip install -U neovim
   gem update neovim
+
+  nvim +PlugUpgrade +qall
+  nvim +PlugUpdate +qall
+  nvim +PlugClean! +qall
 }
 
 # pkg.installed() {
