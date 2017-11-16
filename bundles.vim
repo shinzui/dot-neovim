@@ -9,6 +9,10 @@ Plug 'cocopon/iceberg.vim'
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 
+"file manager
+Plug 'justinmk/vim-dirvish'
+Plug 'tpope/vim-eunuch'
+
 "Copying & Pasting
 Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
 
