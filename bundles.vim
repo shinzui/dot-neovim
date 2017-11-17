@@ -10,8 +10,7 @@ Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 
 "file manager
-Plug 'justinmk/vim-dirvish'
-Plug 'tpope/vim-eunuch'
+Plug 'Shougo/unite.vim' | Plug 'Shougo/vimfiler.vim'
 
 "Copying & Pasting
 Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
