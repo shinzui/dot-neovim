@@ -71,4 +71,8 @@ Plug 'uarun/vim-protobuf'
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
 
 
+"emoji
+Plug 'junegunn/vim-emoji'
+
+
 call plug#end()
