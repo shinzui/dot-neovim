@@ -87,6 +87,15 @@ let mapleader = "\<Space>"
 "Strip all trailing whitespace
 nnoremap <leader>W :%!git stripspace<CR>
 
+"""config
+
+augroup spellcheck
+	autocmd!
+	autocmd FileType markdown setlocal spell
+	autocmd FileType gitcommit setlocal spell
+	autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+augroup END
+
 """Plugins
 "vimfiler
 let g:vimfiler_as_default_explorer = 1
