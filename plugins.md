@@ -16,15 +16,23 @@
 
 [easymotion](https://github.com/easymotion/vim-easymotion)
 
+### File manager
+
+[vimfiler](https://github.com/Shougo/vimfiler.vim) Use until
+[defx](https://github.com/Shougo/defx.nvim) is ready
+
 ### Development
 
 [ale](https://github.com/w0rp/ale) Asynchronous Lint Engine
 
-
 #### Git
 
-[gina](https://github.com/lambdalisue/gina.vim) Asynchronously control git repositories
-[vim-gitgutter](https://github.com/airblade/vim-gitgutter) Shows a git diff in the gutter
+[gina](https://github.com/lambdalisue/gina.vim) Asynchronously control git
+repositories
+
+[vim-gitgutter](https://github.com/airblade/vim-gitgutter) Shows a git diff in
+the gutter
+
 [gv.vim](https://github.com/junegunn/gv.vim) A git commit browser
 
 ### Search
