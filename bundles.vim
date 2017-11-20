@@ -11,6 +11,7 @@ Plug 'easymotion/vim-easymotion'
 
 "file manager
 Plug 'Shougo/unite.vim' | Plug 'Shougo/vimfiler.vim'
+Plug 'airblade/vim-rooter'
 
 "Copying & Pasting
 Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
