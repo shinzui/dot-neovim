@@ -67,6 +67,9 @@ Plug 'cespare/vim-toml'
 "Protocol Buffers
 Plug 'uarun/vim-protobuf'
 
+"emoji
+Plug 'junegunn/vim-emoji'
+
 "Adds :Terraform command to run terraform. Also sets up *.tf, *.tfvars, and
 "*.tfstate files to be highlighted
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
