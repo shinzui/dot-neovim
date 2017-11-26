@@ -42,6 +42,7 @@ Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'elzr/vim-json'
 Plug 'gutenye/json5.vim'
+Plug 'Galooshi/vim-import-js'
 
 "Web development
 Plug 'mattn/emmet-vim'
