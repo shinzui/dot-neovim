@@ -12,7 +12,7 @@ pkg.install() {
   pip2 install neovim --upgrade --user
   pip3 install neovim --upgrade
   pip3 install typing --upgrade
-	yarn global add javascript-typescript-langserver
+	yarn global add javascript-typescript-langserver import-js
   gem install neovim
 
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
