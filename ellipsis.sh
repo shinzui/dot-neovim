@@ -11,6 +11,8 @@ pkg.install() {
   brew install python3
   pip2 install neovim --upgrade --user
   pip3 install neovim --upgrade
+  pip3 install typing --upgrade
+	yarn global add javascript-typescript-langserver
   gem install neovim
 
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
