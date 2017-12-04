@@ -82,5 +82,8 @@ Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
 "emoji
 Plug 'junegunn/vim-emoji'
 
+"undo visualizer
+Plug 'simnalamburt/vim-mundo'
+
 
 call plug#end()
