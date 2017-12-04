@@ -96,6 +96,11 @@ augroup spellcheck
 	autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 augroup END
 
+
+"Enable persistent undo
+set undofile
+set undodir=~/.local/share/nvim/undo/
+
 """Plugins
 "vimfiler
 let g:vimfiler_as_default_explorer = 1
