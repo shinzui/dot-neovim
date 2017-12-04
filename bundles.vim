@@ -45,6 +45,7 @@ Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascri
 Plug 'elzr/vim-json'
 Plug 'gutenye/json5.vim'
 Plug 'Galooshi/vim-import-js'
+Plug 'Quramy/vim-js-pretty-template'
 
 "Web development
 Plug 'mattn/emmet-vim'
@@ -56,7 +57,7 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascript.jsx']}
 
 "graphql
-Plug 'jparise/vim-graphql', { 'for': ['graphql'] }
+Plug 'jparise/vim-graphql'
 
 "handlebars
 Plug 'mustache/vim-mustache-handlebars'

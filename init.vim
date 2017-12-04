@@ -166,12 +166,16 @@ autocmd BufWritePre *.jsx Neoformat
 autocmd BufWritePre *.gql Neoformat
 autocmd BufWritePre *.json Neoformat
 autocmd BufWritePre *.md Neoformat
-autocmd filetype javascript set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
-autocmd filetype javascript.jsx set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
-autocmd filetype graphql set formatprg=prettier
-autocmd filetype json set formatprg=prettier
-autocmd filetype markdown set formatprg=prettier\ --parser\ markdown
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
+autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
+autocmd FileType javascript JsPreTmpl html
+autocmd FileType graphql set formatprg=prettier
+autocmd FileType json set formatprg=prettier
+autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
 let g:neoformat_try_formatprg = 1
+
+""vim-js-pretty-template
+call jspretmpl#register_tag('gql', 'graphql')
 
 "ale
 let g:ale_lint_on_save = 1
