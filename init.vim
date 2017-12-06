@@ -90,6 +90,9 @@ nnoremap <leader>W :%!git stripspace<CR>
 "bind control-l to hashrocket
 imap <C-l> =><Space>
 
+"save file
+nnoremap <Leader>w :w<CR>
+
 """config
 
 augroup spellcheck
