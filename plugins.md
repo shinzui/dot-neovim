@@ -1,13 +1,3 @@
-## Leader Bindings
-
-| mapping   | description                     | plugin     |
-| --------- | ------------------------------- | ---------- |
-| <leader>w | Save file                       |            |
-| <leader>W | Stip whitespace                 |            |
-| <leader>b | List all buffers                | fzf.vim    |
-| <leader>l | List all lines from all buffers | fzf.vim    |
-| <leader>s | easymotion over window          | easymotion |
-
 ### Navigation
 
 [fzf.vim](https://github.com/junegunn/fzf.vim)
