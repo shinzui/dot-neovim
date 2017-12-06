@@ -87,6 +87,9 @@ let mapleader = "\<Space>"
 "Strip all trailing whitespace
 nnoremap <leader>W :%!git stripspace<CR>
 
+"bind control-l to hashrocket
+imap <C-l> =><Space>
+
 """config
 
 augroup spellcheck
