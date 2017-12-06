@@ -217,3 +217,6 @@ let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+
+"vim-emoji
+set completefunc=emoji#complete
