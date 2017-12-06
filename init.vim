@@ -182,6 +182,9 @@ let g:neoformat_try_formatprg = 1
 ""vim-js-pretty-template
 call jspretmpl#register_tag('gql', 'graphql')
 
+""indentLine
+let g:indentLine_enabled = 0
+
 "ale
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
