@@ -21,11 +21,14 @@ Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
 Plug 'haya14busa/is.vim'
 Plug 'haya14busa/vim-asterisk'
 
-"Utilities
+""Utilities
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 
 Plug 'Shougo/junkfile.vim'
+
+"undo visualizer
+Plug 'simnalamburt/vim-mundo'
 
 "Formatting
 Plug 'sbdchd/neoformat'
@@ -79,11 +82,12 @@ Plug 'junegunn/vim-emoji'
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
 
 
+"Kubernetes
+Plug 'andrewstuart/vim-kubernetes'
+
 "emoji
 Plug 'junegunn/vim-emoji'
 
-"undo visualizer
-Plug 'simnalamburt/vim-mundo'
 
 
 call plug#end()
