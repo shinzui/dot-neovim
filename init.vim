@@ -216,6 +216,8 @@ inoremap <expr><C-h>
 inoremap <expr><BS>
 \ deoplete#smart_close_popup()."\<C-h>"
 
+call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
+
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {}
