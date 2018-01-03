@@ -71,6 +71,9 @@ Plug 'amadeus/vim-mjml'
 "TOML
 Plug 'cespare/vim-toml'
 
+"jsonnet
+Plug 'google/vim-jsonnet'
+
 "Protocol Buffers
 Plug 'uarun/vim-protobuf'
 
