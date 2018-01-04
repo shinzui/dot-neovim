@@ -30,6 +30,9 @@ Plug 'Shougo/junkfile.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
+"commenting
+Plug 'tomtom/tcomment_vim'
+
 "undo visualizer
 Plug 'simnalamburt/vim-mundo'
 
