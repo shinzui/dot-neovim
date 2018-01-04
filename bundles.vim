@@ -27,6 +27,9 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'Shougo/junkfile.vim'
 
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
 "undo visualizer
 Plug 'simnalamburt/vim-mundo'
 
