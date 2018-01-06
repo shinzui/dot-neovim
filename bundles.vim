@@ -98,6 +98,9 @@ Plug 'andrewstuart/vim-kubernetes'
 "emoji
 Plug 'junegunn/vim-emoji'
 
+"Terminal
+Plug 'kassio/neoterm'
+
 
 
 call plug#end()

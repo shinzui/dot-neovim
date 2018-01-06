@@ -227,3 +227,9 @@ nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 
 "vim-emoji
 set completefunc=emoji#complete
+
+"neoterm
+nnoremap <silent> ,th :call neoterm#close()<cr>
+nnoremap <silent> ,tl :call neoterm#clear()<cr>
+nnoremap <silent> ,tc :call neoterm#kill()<cr>
+
