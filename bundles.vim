@@ -89,6 +89,7 @@ Plug 'junegunn/vim-emoji'
 "Adds :Terraform command to run terraform. Also sets up *.tf, *.tfvars, and
 "*.tfstate files to be highlighted
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
+Plug 'juliosueiras/vim-terraform-completion', { 'for': ['terraform'] }
 
 
 "Kubernetes
