@@ -20,6 +20,7 @@ Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
 "Search
 Plug 'haya14busa/is.vim'
 Plug 'haya14busa/vim-asterisk'
+Plug 'brooth/far.vim'
 
 ""Utilities
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'

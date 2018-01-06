@@ -41,6 +41,8 @@ the gutter
 
 [vim-asterisk](https://github.com/haya14busa/vim-asterisk)
 
+[far.vim](https://github.com/brooth/far.vim) Find And Replace
+
 ### Copying & Pasting
 
 [vim-operator-flashy](https://github.com/haya14busa/vim-operator-flashy)
