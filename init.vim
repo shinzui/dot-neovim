@@ -124,6 +124,10 @@ let g:vimfiler_marked_file_icon = '✓'
 "disable netrw
 let g:loaded_netrwPlugin = 1
 
+"choosewin
+nmap <Leader>p <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
+
 ""fzf
 let g:fzf_layout = { 'window': '10split enew' }
 nnoremap <silent> <C-t> :Files<CR>

@@ -7,3 +7,4 @@
 | `<leader>b` | List all buffers                | fzf.vim    |
 | `<leader>l` | List all lines from all buffers | fzf.vim    |
 | `<leader>s` | easymotion over window          | easymotion |
+| `<leader>p` | choosewin                       | choosewin  |

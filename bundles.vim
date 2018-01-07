@@ -10,6 +10,9 @@ Plug 'cocopon/iceberg.vim'
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 
+"windows & tabs
+Plug 't9md/vim-choosewin'
+
 "file manager
 Plug 'Shougo/unite.vim' | Plug 'Shougo/vimfiler.vim'
 Plug 'airblade/vim-rooter'
