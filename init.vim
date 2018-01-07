@@ -199,6 +199,7 @@ call jspretmpl#register_tag('gql', 'graphql')
 
 ""indentLine
 let g:indentLine_enabled = 0
+let g:indentLine_char = '▏'
 
 "ale
 let g:ale_lint_on_save = 1
