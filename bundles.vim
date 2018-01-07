@@ -102,4 +102,6 @@ Plug 'junegunn/vim-emoji'
 "Terminal
 Plug 'kassio/neoterm'
 
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()

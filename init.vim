@@ -102,7 +102,6 @@ augroup spellcheck
 	autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 augroup END
 
-
 "Enable persistent undo
 set undofile
 set undodir=~/.local/share/nvim/undo/
@@ -220,14 +219,12 @@ let col = col('.') - 1
 return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
-
 inoremap <expr><C-h>
 \ deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>
 \ deoplete#smart_close_popup()."\<C-h>"
 
 call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
-
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {}
@@ -244,3 +241,10 @@ nnoremap <silent> ,th :call neoterm#close()<cr>
 nnoremap <silent> ,tl :call neoterm#clear()<cr>
 nnoremap <silent> ,tc :call neoterm#kill()<cr>
 
+if &term == 'screen-256color'
+  let g:tmux_navigator_no_mappings = 1
+  nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+  nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+  nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+  nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+endif
