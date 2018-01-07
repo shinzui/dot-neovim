@@ -19,6 +19,7 @@ Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
 
 "Search
 Plug 'haya14busa/is.vim'
+Plug 'osyo-manga/vim-anzu'
 Plug 'haya14busa/vim-asterisk'
 Plug 'brooth/far.vim'
 
@@ -87,11 +88,10 @@ Plug 'uarun/vim-protobuf'
 "emoji
 Plug 'junegunn/vim-emoji'
 
-"Adds :Terraform command to run terraform. Also sets up *.tf, *.tfvars, and
-"*.tfstate files to be highlighted
+"Adds :Terraform command to run terraform. Also sets up _.tf, _.tfvars, and
+"\*.tfstate files to be highlighted
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
 Plug 'juliosueiras/vim-terraform-completion', { 'for': ['terraform'] }
-
 
 "Kubernetes
 Plug 'andrewstuart/vim-kubernetes'
@@ -101,7 +101,5 @@ Plug 'junegunn/vim-emoji'
 
 "Terminal
 Plug 'kassio/neoterm'
-
-
 
 call plug#end()

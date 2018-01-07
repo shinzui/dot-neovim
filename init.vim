@@ -6,7 +6,7 @@ set nocompatible
 filetype off
 
 if filereadable(expand("~/.config/nvim/bundles.vim"))
-  source ~/.config/nvim/bundles.vim
+source ~/.config/nvim/bundles.vim
 endif
 
 set modelines=0
@@ -162,8 +162,19 @@ nmap Y <Plug>(operator-flashy)$
 ""is.vim & vim-asterisk
 map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
 map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
-map #  <Plug>(asterisk-z#)<Plug>(is-nohl-1)
+map # <Plug>(asterisk-z#)<Plug>(is-nohl-1)
 map g# <Plug>(asterisk-gz#)<Plug>(is-nohl-1)
+
+map n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
+map N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
+nmap * <Plug>(anzu-star-with-echo)
+nmap # <Plug>(anzu-sharp-with-echo)
+
+" clear status
+nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
+
+"anzu statusline
+set statusline=%{anzu#search_status()}
 
 let g:asterisk#keeppos = 1
 
