@@ -10,6 +10,8 @@ Plug 'cocopon/iceberg.vim'
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 
+Plug 'haya14busa/vim-edgemotion'
+
 "windows & tabs
 Plug 't9md/vim-choosewin'
 
@@ -53,7 +55,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/gina.vim'
 
 "JavaScript
-Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/es.next.syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'elzr/vim-json'
@@ -82,6 +85,10 @@ Plug 'amadeus/vim-mjml'
 "TOML
 Plug 'cespare/vim-toml'
 
+
+"Go
+Plug 'fatih/vim-go'
+
 "jsonnet
 Plug 'google/vim-jsonnet'
 
@@ -106,5 +113,8 @@ Plug 'junegunn/vim-emoji'
 Plug 'kassio/neoterm'
 
 Plug 'christoomey/vim-tmux-navigator'
+"Utility to generate color scheme for tmux
+Plug 'edkolev/tmuxline.vim'
+
 
 call plug#end()
