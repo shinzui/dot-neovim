@@ -72,6 +72,9 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 set termguicolors
 colorscheme iceberg
+" let g:airline#extensions#tmuxline#enabled = 0
+" let g:tmuxline_theme = 'iceberg'
+
 
 """Bindings
 
@@ -157,6 +160,8 @@ map ;h <Plug>(easymotion-linebackward)
 map ;j <Plug>(easymotion-j)
 map ;k <Plug>(easymotion-k)
 map ;l <Plug>(easymotion-lineforward)
+
+map <Leader>j <Plug>(edgemotion-j)
 
 ""vim-operator-flashy
 map y <Plug>(operator-flashy)
