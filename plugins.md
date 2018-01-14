@@ -16,6 +16,12 @@
 
 [easymotion](https://github.com/easymotion/vim-easymotion)
 
+[vim-edgemotion](https://github.com/haya14busa/vim-edgemotion)
+
+### Windows & Tabs
+
+[t9md/vim-choosewin](https://github.com/t9md/vim-choosewin)
+
 ### File manager
 
 [vimfiler](https://github.com/Shougo/vimfiler.vim) Use until
