@@ -197,6 +197,7 @@ autocmd FileType graphql set formatprg=prettier
 autocmd FileType json set formatprg=prettier
 autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
 let g:neoformat_try_formatprg = 1
+let g:neoformat_enabled_yaml = []
 
 ""vim-js-pretty-template
 call jspretmpl#register_tag('gql', 'graphql')
