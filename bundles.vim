@@ -69,6 +69,9 @@ Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 Plug 'hail2u/vim-css3-syntax' "css
 
+"ocaml/reason
+Plug 'reasonml-editor/vim-reason-plus'
+
 "react
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascript.jsx']}
