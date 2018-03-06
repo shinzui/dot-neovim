@@ -83,6 +83,9 @@ Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascr
 "graphql
 Plug 'jparise/vim-graphql'
 
+"rust
+Plug 'rust-lang/rust.vim'
+
 "handlebars
 Plug 'mustache/vim-mustache-handlebars'
 

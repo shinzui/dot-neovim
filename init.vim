@@ -265,6 +265,9 @@ if &term == 'screen-256color'
   nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 endif
 
+"rust
+let g:rustfmt_autosave = 1
+
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
