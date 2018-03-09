@@ -76,6 +76,7 @@ Plug 'hail2u/vim-css3-syntax' "css
 
 "ocaml/reason
 Plug 'reasonml-editor/vim-reason-plus'
+Plug 'juanchanco/vim-jbuilder'
 
 "react
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
