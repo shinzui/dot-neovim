@@ -1,14 +1,15 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ } 
+\ 'branch': 'next',
+\ 'do': 'bash install.sh',
+\ }
 Plug 'Shougo/echodoc.vim'
 
 "color schemes
 Plug 'cocopon/iceberg.vim'
+Plug 'arcticicestudio/nord-vim'
 
 "Navigation
 Plug 'junegunn/fzf' | Plug 'junegunn/fzf.vim'
@@ -97,7 +98,6 @@ Plug 'amadeus/vim-mjml'
 "TOML
 Plug 'cespare/vim-toml'
 
-
 "Go
 Plug 'fatih/vim-go'
 
@@ -127,6 +127,5 @@ Plug 'kassio/neoterm'
 Plug 'christoomey/vim-tmux-navigator'
 "Utility to generate color scheme for tmux
 Plug 'edkolev/tmuxline.vim'
-
 
 call plug#end()

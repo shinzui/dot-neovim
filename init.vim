@@ -71,7 +71,9 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 "Color
 
 set termguicolors
-colorscheme iceberg
+colorscheme nord
+let g:nord_italic = 1
+let g:nord_comment_brightness = 12
 " let g:airline#extensions#tmuxline#enabled = 0
 " let g:tmuxline_theme = 'iceberg'
 
