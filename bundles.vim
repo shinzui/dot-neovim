@@ -118,6 +118,9 @@ Plug 'juliosueiras/vim-terraform-completion', { 'for': ['terraform'] }
 "Kubernetes
 Plug 'andrewstuart/vim-kubernetes'
 
+"databases
+Plug 'tpope/vim-db'
+
 "emoji
 Plug 'junegunn/vim-emoji'
 
