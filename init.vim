@@ -248,7 +248,7 @@ inoremap <expr><C-h>
 inoremap <expr><BS>
 \ deoplete#smart_close_popup()."\<C-h>"
 
-call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
+call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 
 
 "vim-emoji
