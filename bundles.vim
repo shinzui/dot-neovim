@@ -88,6 +88,7 @@ Plug 'jparise/vim-graphql'
 
 "rust
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 "handlebars
 Plug 'mustache/vim-mustache-handlebars'

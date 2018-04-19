@@ -220,6 +220,8 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 
 """Completions
+set omnifunc=syntaxcomplete#Complete
+
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {}
 let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
@@ -269,6 +271,9 @@ endif
 
 "rust
 let g:rustfmt_autosave = 1
+let g:racer_cmd = "~/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
