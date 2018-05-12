@@ -61,6 +61,7 @@ set autoindent
 set number
 set relativenumber
 set autoread
+au FocusGained * :checktime
 
 " Do not force writing modified files to switch buffers
 set hidden
