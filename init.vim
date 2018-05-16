@@ -204,6 +204,7 @@ autocmd FileType javascript JsPreTmpl html
 autocmd FileType graphql set formatprg=prettier
 autocmd FileType json set formatprg=prettier
 autocmd FileType yaml set formatprg=pyaml
+autocmd FileType toml set formatprg=
 autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
 let g:neoformat_try_formatprg = 1
 let g:neoformat_enabled_javascript = [ 'prettier' ]
