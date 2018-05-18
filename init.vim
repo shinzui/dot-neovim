@@ -209,6 +209,7 @@ autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
 let g:neoformat_try_formatprg = 1
 let g:neoformat_enabled_javascript = [ 'prettier' ]
 let g:neoformat_enabled_handlebars = []
+let g:neoformat_enabled_reason = [ 'refmt' ]
 let g:neoformat_enabled_html = []
 " let g:neoformat_enabled_yaml = []
 
@@ -256,6 +257,7 @@ inoremap <expr><BS>
 \ deoplete#smart_close_popup()."\<C-h>"
 
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+
 
 
 "vim-emoji
