@@ -140,6 +140,9 @@ nnoremap <silent> <C-t> :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>l :BLines<CR>
 
+""ack
+let g:ackprg = 'rg --vimgrep --no-heading'
+
 ""easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1

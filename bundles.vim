@@ -28,6 +28,7 @@ Plug 'airblade/vim-rooter'
 Plug 'kana/vim-operator-user' | Plug 'haya14busa/vim-operator-flashy'
 
 "Search
+Plug 'mileszs/ack.vim'
 Plug 'haya14busa/is.vim'
 Plug 'osyo-manga/vim-anzu'
 Plug 'haya14busa/vim-asterisk'
