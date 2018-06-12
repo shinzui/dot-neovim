@@ -201,8 +201,8 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
-autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --single-quote\ --print-width\ 101\ --no-semi\ --trailing-comma\ es5
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
+autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 101\ --no-semi\ --trailing-comma\ es5
 autocmd FileType javascript JsPreTmpl html
 autocmd FileType graphql set formatprg=prettier
 autocmd FileType json set formatprg=prettier
