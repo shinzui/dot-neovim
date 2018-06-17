@@ -70,6 +70,7 @@ Plug 'elzr/vim-json'
 Plug 'gutenye/json5.vim'
 Plug 'Galooshi/vim-import-js'
 Plug 'Quramy/vim-js-pretty-template'
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript'] }
 
 "Web development
 Plug 'mattn/emmet-vim'
