@@ -211,6 +211,7 @@ autocmd FileType toml set formatprg=
 autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
 let g:neoformat_try_formatprg = 1
 let g:neoformat_enabled_javascript = [ 'prettier' ]
+let g:neoformat_enabled_terraform = [ 'terraform' ]
 let g:neoformat_enabled_handlebars = []
 let g:neoformat_enabled_reason = [ 'refmt' ]
 let g:neoformat_enabled_html = []
