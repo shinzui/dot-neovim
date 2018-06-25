@@ -34,6 +34,7 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'haya14busa/vim-asterisk'
 Plug 'brooth/far.vim'
 Plug 'chrisbra/NrrwRgn'
+Plug 'dyng/ctrlsf.vim'
 
 ""Utilities
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
