@@ -214,6 +214,7 @@ let g:neoformat_enabled_javascript = [ 'prettier' ]
 let g:neoformat_enabled_terraform = [ 'terraform' ]
 let g:neoformat_enabled_handlebars = []
 let g:neoformat_enabled_reason = [ 'refmt' ]
+let g:neoformat_enabled_ocaml = ['ocamlformat']
 let g:neoformat_enabled_html = []
 " let g:neoformat_enabled_yaml = []
 
