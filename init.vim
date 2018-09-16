@@ -267,7 +267,8 @@ inoremap <expr><BS>
 
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 
-
+"fzf-merlin
+au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
 
 "vim-emoji
 set completefunc=emoji#complete
