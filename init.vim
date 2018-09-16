@@ -63,6 +63,8 @@ set relativenumber
 set autoread
 au FocusGained * :checktime
 
+set cursorline
+
 " Do not force writing modified files to switch buffers
 set hidden
 
@@ -74,10 +76,12 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 set termguicolors
 colorscheme nord
 let g:nord_italic = 1
-let g:nord_comment_brightness = 12
+let g:nord_underline = 1
+let g:nord_italic_comments = 1
+let g:nord_comment_brightness = 20
+let g:nord_cursor_line_number_background = 1
 " let g:airline#extensions#tmuxline#enabled = 0
 " let g:tmuxline_theme = 'iceberg'
-
 
 """Bindings
 
