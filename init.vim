@@ -200,6 +200,9 @@ let g:asterisk#keeppos = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='iceberg'
 
+"disable broken extension
+let g:airline#extensions#languageclient#enabled =0
+
 ""neoformat
 augroup fmt
   autocmd!
