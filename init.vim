@@ -245,6 +245,8 @@ let g:LanguageClient_serverCommands = {}
 let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
 let g:LanguageClient_serverCommands.reason = ['ocaml-language-server', '--stdio']
 let g:LanguageClient_serverCommands.ocaml = ['ocaml-language-server', '--stdio']
+let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
+
 let g:LanguageClient_loggingLevel = 'DEBUG'
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
@@ -298,7 +300,6 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
-
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
