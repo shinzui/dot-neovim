@@ -36,6 +36,10 @@ Plug 'brooth/far.vim'
 Plug 'chrisbra/NrrwRgn'
 Plug 'dyng/ctrlsf.vim'
 
+
+""tools
+Plug 'kristijanhusak/vim-carbon-now-sh'
+
 ""Utilities
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
