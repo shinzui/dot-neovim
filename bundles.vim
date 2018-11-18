@@ -87,6 +87,9 @@ Plug 'reasonml-editor/vim-reason-plus'
 Plug 'figitaki/vim-dune'
 Plug 'andreypopp/fzf-merlin'
 
+"haskell
+Plug 'parsonsmatt/intero-neovim'
+
 "react
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascript.jsx']}
