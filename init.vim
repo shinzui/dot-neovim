@@ -280,6 +280,17 @@ au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
 "vim-emoji
 set completefunc=emoji#complete
 
+"""terminal
+"Quit terminal
+tnoremap <Esc> <C-\><C-n>
+
+"navigate from terminal
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
+
+
 "neoterm
 nnoremap <silent> ,th :call neoterm#close()<cr>
 nnoremap <silent> ,tl :call neoterm#clear()<cr>
