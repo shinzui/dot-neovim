@@ -50,6 +50,8 @@ set wildignore+=public/uploads/**
 set wildignore+=doc/yard/**,.yardoc/**
 set wildignore+=log/**
 set wildignore+=tmp/**
+set wildignore+=_build/**
+set wildignore+=_opam/**
 
 filetype on
 filetype indent on
