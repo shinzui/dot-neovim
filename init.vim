@@ -70,7 +70,7 @@ set cursorline
 " Do not force writing modified files to switch buffers
 set hidden
 
-let g:python2_host_prog = '/usr/local/bin/python'
+let g:python2_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 "Color

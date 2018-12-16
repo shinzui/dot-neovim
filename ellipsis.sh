@@ -9,8 +9,8 @@ pkg.install() {
   brew install neovim
   brew install python
   brew install python3
-  pip2 install neovim --upgrade --user
-  pip3 install neovim --upgrade
+  pip2 install pynvim --upgrade --user
+  pip3 install pynvim --upgrade
   pip3 install typing --upgrade
 	yarn global add javascript-typescript-langserver import-js ocaml-language-server neovim
   gem install neovim
@@ -37,8 +37,8 @@ pkg.pull() {
 
   brew update
   brew upgrade neovim
-  pip2 install -U neovim
-  pip3 install -U neovim
+  pip2 install -U pynvim
+  pip3 install -U pynvim
   pip3 install -U pyaml
   gem update neovim
 
