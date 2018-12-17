@@ -280,6 +280,14 @@ au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
 "vim-emoji
 set completefunc=emoji#complete
 
+"""git
+"gina
+
+
+call gina#custom#command#option('status', '--opener', 'split')
+set diffopt+=vertical
+
+
 """terminal
 "Quit terminal
 tnoremap <Esc> <C-\><C-n>
