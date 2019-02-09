@@ -84,6 +84,11 @@ let g:nord_comment_brightness = 20
 let g:nord_cursor_line_number_background = 1
 " let g:airline#extensions#tmuxline#enabled = 0
 " let g:tmuxline_theme = 'iceberg'
+"
+"
+""Preview window
+"open at the bottom
+" set splitbelow
 
 """Bindings
 
@@ -212,19 +217,21 @@ augroup fmt
 augroup END
 autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
 autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 101\ --no-semi\ --trailing-comma\ es5
-autocmd FileType javascript JsPreTmpl html
+" autocmd FileType dune set formatprg=dune\ unstable-fmt\ --inplace
+autocmd FileType javascript JsPreTmpl
 autocmd FileType graphql set formatprg=prettier
 autocmd FileType json set formatprg=prettier
 autocmd FileType yaml set formatprg=pyaml
 autocmd FileType toml set formatprg=
-autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
+" autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
 let g:neoformat_try_formatprg = 1
 let g:neoformat_enabled_javascript = [ 'prettier' ]
 let g:neoformat_enabled_terraform = [ 'terraform' ]
 let g:neoformat_enabled_handlebars = []
-let g:neoformat_enabled_reason = [ 'refmt' ]
+" let g:neoformat_enabled_reason = [ 'refmt' ]
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 let g:neoformat_enabled_html = []
+let g:neoformat_only_msg_on_error = 1
 " let g:neoformat_enabled_yaml = []
 
 ""vim-js-pretty-template
@@ -290,7 +297,7 @@ set diffopt+=vertical
 
 """terminal
 "Quit terminal
-tnoremap <Esc> <C-\><C-n>
+" tnoremap <Esc> <C-\><C-n>
 
 "navigate from terminal
 tnoremap <C-h> <C-\><C-N><C-w>h
