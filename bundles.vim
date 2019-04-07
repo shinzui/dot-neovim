@@ -117,9 +117,6 @@ Plug 'cespare/vim-toml'
 "Go
 Plug 'fatih/vim-go'
 
-"jsonnet
-Plug 'google/vim-jsonnet'
-
 "Protocol Buffers
 Plug 'uarun/vim-protobuf'
 
@@ -136,9 +133,6 @@ Plug 'andrewstuart/vim-kubernetes'
 
 "databases
 Plug 'tpope/vim-db'
-
-"emoji
-Plug 'junegunn/vim-emoji'
 
 "Terminal
 Plug 'kassio/neoterm'
