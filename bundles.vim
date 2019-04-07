@@ -21,7 +21,10 @@ Plug 'haya14busa/vim-edgemotion'
 Plug 't9md/vim-choosewin'
 
 "file manager
-Plug 'Shougo/unite.vim' | Plug 'Shougo/vimfiler.vim'
+" Plug 'Shougo/unite.vim' | Plug 'Shougo/vimfiler.vim'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
 Plug 'airblade/vim-rooter'
 
 "Copying & Pasting

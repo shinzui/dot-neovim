@@ -24,8 +24,7 @@
 
 ### File manager
 
-[vimfiler](https://github.com/Shougo/vimfiler.vim) Use until
-[defx](https://github.com/Shougo/defx.nvim) is ready
+[defx](https://github.com/Shougo/defx.nvim)
 
 ### Development
 
