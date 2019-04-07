@@ -221,7 +221,7 @@ autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --parser\ flow\
 autocmd FileType javascript JsPreTmpl
 autocmd FileType graphql set formatprg=prettier
 autocmd FileType json set formatprg=prettier
-autocmd FileType yaml set formatprg=pyaml
+autocmd FileType yaml set formatprg=prettier
 autocmd FileType toml set formatprg=
 " autocmd FileType markdown set formatprg=prettier\ --parser\ markdown
 let g:neoformat_try_formatprg = 1
@@ -229,6 +229,7 @@ let g:neoformat_enabled_javascript = [ 'prettier' ]
 let g:neoformat_enabled_terraform = [ 'terraform' ]
 let g:neoformat_enabled_handlebars = []
 " let g:neoformat_enabled_reason = [ 'refmt' ]
+let g:neoformat_enabled_yaml = [ 'prettier' ]
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 let g:neoformat_enabled_html = []
 let g:neoformat_only_msg_on_error = 1
