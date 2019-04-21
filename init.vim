@@ -6,7 +6,7 @@ set nocompatible
 filetype off
 
 if filereadable(expand("~/.config/nvim/bundles.vim"))
-source ~/.config/nvim/bundles.vim
+  source ~/.config/nvim/bundles.vim
 endif
 
 set modelines=0
@@ -115,10 +115,10 @@ augroup mainautocmd
 augroup END
 
 augroup spellcheck
-	autocmd!
-	autocmd FileType markdown setlocal spell
-	autocmd FileType gitcommit setlocal spell
-	autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+  autocmd!
+  autocmd FileType markdown setlocal spell
+  autocmd FileType gitcommit setlocal spell
+  autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 augroup END
 
 "Enable persistent undo
@@ -271,18 +271,18 @@ nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<CR>
 let g:deoplete#enable_at_startup = 1
 
 inoremap <silent><expr> <TAB>
-\ pumvisible() ? "\<C-n>" :
-\ <SID>check_back_space() ? "\<TAB>" :
-\ deoplete#mappings#manual_complete()
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#mappings#manual_complete()
 function! s:check_back_space() abort "{{{
-let col = col('.') - 1
-return !col || getline('.')[col - 1]  =~ '\s'
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
 inoremap <expr><C-h>
-\ deoplete#smart_close_popup()."\<C-h>"
+      \ deoplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS>
-\ deoplete#smart_close_popup()."\<C-h>"
+      \ deoplete#smart_close_popup()."\<C-h>"
 
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 
@@ -295,10 +295,8 @@ set completefunc=emoji#complete
 """git
 "gina
 
-
 call gina#custom#command#option('status', '--opener', 'split')
 set diffopt+=vertical
-
 
 """terminal
 "Quit terminal
@@ -313,22 +311,19 @@ tnoremap <C-l> <C-\><C-N><C-w>l
 "Verbatim escape
 tnoremap <C-v><Esc> <Esc>
 
-
 """DEFX
 call defx#custom#option('_', {
-	\ 'columns': 'icons:git:filename:type',
-	\ 'winwidth': 25,
-	\ 'split': 'vertical',
-	\ 'direction': 'topleft',
-	\ 'show_ignored_files': 1,
-	\ })
+      \ 'columns': 'icons:git:filename:type',
+      \ 'winwidth': 25,
+      \ 'split': 'vertical',
+      \ 'direction': 'topleft',
+      \ 'show_ignored_files': 1,
+      \ })
 
 call defx#custom#column('filename', {
-	\ 'min_width': 5,
-	\ 'max_width': 25,
-	\ })
-
-
+      \ 'min_width': 5,
+      \ 'max_width': 25,
+      \ })
 
 " Close defx if it's the only buffer left in the window
 autocmd mainautocmd WinEnter * if &ft == 'defx' && winnr('$') == 1 | q | endif
@@ -339,60 +334,59 @@ autocmd mainautocmd TabLeave * if &ft == 'defx' | wincmd w | endif
 " Define mappings
 autocmd mainautocmd FileType defx do WinEnter | call s:defx_my_settings()
 function! s:defx_my_settings() abort
-	nnoremap <silent><buffer><expr> <CR>  defx#do_action('drop')
-	nnoremap <silent><buffer><expr> l     defx#do_action('drop')
-	nnoremap <silent><buffer><expr> vs    defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
-	nnoremap <silent><buffer><expr> sp    defx#do_action('multi', [['drop', 'split'], 'quit'])
-	nnoremap <silent><buffer><expr> P     defx#do_action('open', 'pedit')
-	nnoremap <silent><buffer><expr> K     defx#do_action('new_directory')
-	nnoremap <silent><buffer><expr> N     defx#do_action('new_multiple_files')
-	nnoremap <silent><buffer><expr> dd    defx#do_action('remove_trash')
-	nnoremap <silent><buffer><expr> r     defx#do_action('rename')
-	nnoremap <silent><buffer><expr> x     defx#do_action('execute_system')
-	nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')
-	nnoremap <silent><buffer><expr> yy    defx#do_action('yank_path')
-	nnoremap <silent><buffer><expr> ..     defx#do_action('cd', ['..'])
-	nnoremap <silent><buffer><expr> q     defx#do_action('quit')
+  nnoremap <silent><buffer><expr> <CR>  defx#do_action('drop')
+  nnoremap <silent><buffer><expr> l     defx#do_action('drop')
+  nnoremap <silent><buffer><expr> vs    defx#do_action('multi', [['drop', 'vsplit'], 'quit'])
+  nnoremap <silent><buffer><expr> sp    defx#do_action('multi', [['drop', 'split'], 'quit'])
+  nnoremap <silent><buffer><expr> P     defx#do_action('open', 'pedit')
+  nnoremap <silent><buffer><expr> K     defx#do_action('new_directory')
+  nnoremap <silent><buffer><expr> N     defx#do_action('new_multiple_files')
+  nnoremap <silent><buffer><expr> dd    defx#do_action('remove_trash')
+  nnoremap <silent><buffer><expr> r     defx#do_action('rename')
+  nnoremap <silent><buffer><expr> x     defx#do_action('execute_system')
+  nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')
+  nnoremap <silent><buffer><expr> yy    defx#do_action('yank_path')
+  nnoremap <silent><buffer><expr> ..     defx#do_action('cd', ['..'])
+  nnoremap <silent><buffer><expr> q     defx#do_action('quit')
 
-	nnoremap <silent><buffer><expr><nowait> \  defx#do_action('cd', getcwd())
-	nnoremap <silent><buffer><expr><nowait> &  defx#do_action('cd', getcwd())
-	nnoremap <silent><buffer><expr><nowait> c  defx#do_action('copy')
-	nnoremap <silent><buffer><expr><nowait> m  defx#do_action('move')
-	nnoremap <silent><buffer><expr><nowait> p  defx#do_action('paste')
+  nnoremap <silent><buffer><expr><nowait> \  defx#do_action('cd', getcwd())
+  nnoremap <silent><buffer><expr><nowait> &  defx#do_action('cd', getcwd())
+  nnoremap <silent><buffer><expr><nowait> c  defx#do_action('copy')
+  nnoremap <silent><buffer><expr><nowait> m  defx#do_action('move')
+  nnoremap <silent><buffer><expr><nowait> p  defx#do_action('paste')
 
-	nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
-	nnoremap <silent><buffer><expr> <C-g>  defx#do_action('print')
+  nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
+  nnoremap <silent><buffer><expr> <C-g>  defx#do_action('print')
 
-	nnoremap <silent><buffer><expr> S  defx#do_action('toggle_sort', 'Time')
+  nnoremap <silent><buffer><expr> S  defx#do_action('toggle_sort', 'Time')
 
-	nnoremap <silent><buffer><expr>w   defx#do_action('call', 'DefxToggleWidth')
+  nnoremap <silent><buffer><expr>w   defx#do_action('call', 'DefxToggleWidth')
 endfunction
 
 " Toggle between defx window width and longest line
 function! g:DefxToggleWidth(context) abort
-	let l:max = 0
-	let l:original = a:context['winwidth']
-	for l:line in range(1, line('$'))
-		let l:len = len(getline(l:line))
-		if l:len > l:max
-			let l:max = l:len
-		endif
-	endfor
-	execute 'vertical resize '.(l:max == winwidth('.') ? l:original : l:max)
+  let l:max = 0
+  let l:original = a:context['winwidth']
+  for l:line in range(1, line('$'))
+    let l:len = len(getline(l:line))
+    if l:len > l:max
+      let l:max = l:len
+    endif
+  endfor
+  execute 'vertical resize '.(l:max == winwidth('.') ? l:original : l:max)
 endfunction
 
 " Open file-explorer split with tmux
 function! g:DefxTmuxExplorer(context) abort
-	if empty('$TMUX') || empty(s:explorer)
-		return
-	endif
-	let l:target = a:context['targets'][0]
-	let l:parent = fnamemodify(l:target, ':h')
+  if empty('$TMUX') || empty(s:explorer)
+    return
+  endif
+  let l:target = a:context['targets'][0]
+  let l:parent = fnamemodify(l:target, ':h')
   echo .l.parent
   echo .s:explorer
-	silent execute '!tmux split-window -p 30 -c '.l:parent.' '.s:explorer
+  silent execute '!tmux split-window -p 30 -c '.l:parent.' '.s:explorer
 endfunction
-
 
 "neoterm
 nnoremap <silent> ,th :call neoterm#close()<cr>
@@ -416,7 +410,6 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
-
 
 """Haskell
 "Intero
@@ -454,7 +447,6 @@ augroup interoMaps
   " Prompts you to enter targets (no silent):
   au FileType haskell nnoremap <leader>ist :InteroSetTargets<SPACE>
 augroup END
-
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
