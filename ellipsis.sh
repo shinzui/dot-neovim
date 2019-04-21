@@ -42,6 +42,8 @@ pkg.pull() {
   pip3 install -U pyaml
   gem update neovim
 
+  yarn global add ocaml-language-server neovim
+
   nvim +PlugUpgrade +qall
   nvim +PlugUpdate +qall
   nvim +PlugClean! +qall
