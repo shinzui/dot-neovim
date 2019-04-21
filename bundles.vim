@@ -105,23 +105,23 @@ Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascr
 Plug 'jparise/vim-graphql'
 
 "rust
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+Plug 'rust-lang/rust.vim', { 'for': ['rust'] }
+Plug 'racer-rust/vim-racer', { 'for': ['rust'] }
 
 "handlebars
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars', { 'for': ['html.handlebars', 'handlebars'] }
 
 "mjml
-Plug 'amadeus/vim-mjml'
+Plug 'amadeus/vim-mjml', { 'for': ['mjml'] }
 
 "TOML
-Plug 'cespare/vim-toml'
+Plug 'cespare/vim-toml', {'for': ['toml'] }
 
 "Go
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'for' : ['go'] }
 
 "Protocol Buffers
-Plug 'uarun/vim-protobuf'
+Plug 'uarun/vim-protobuf', { 'for': ['proto'] }
 
 "emoji
 Plug 'junegunn/vim-emoji'
