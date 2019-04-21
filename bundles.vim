@@ -6,6 +6,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ 'do': 'bash install.sh',
 \ }
 Plug 'Shougo/echodoc.vim'
+Plug 'copy/deoplete-ocaml'
 
 "color schemes
 Plug 'cocopon/iceberg.vim'

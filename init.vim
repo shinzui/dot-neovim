@@ -287,6 +287,8 @@ inoremap <expr><C-h>
 inoremap <expr><BS>
       \ deoplete#smart_close_popup()."\<C-h>"
 
+let g:deoplete#ignore_sources = {}
+let g:deoplete#ignore_sources.ocaml = ['buffer', 'around', 'member', 'tag']
 call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
 
 "fzf-merlin
