@@ -133,7 +133,8 @@ let g:vimfiler_safe_mode_by_default = 0
 
 let g:vimfiler_quick_look_command = 'qlmanage -p'
 
-nmap <silent> - :Defx <CR>
+nmap <silent> - :Defx -search=`expand('%:p')` `getcwd()`<CR>
+
 " set fillchars=vert:│,fold:─
 " let g:vimfiler_tree_leaf_icon = "⋮"
 let g:vimfiler_tree_opened_icon = "▼"
