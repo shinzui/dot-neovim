@@ -211,7 +211,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='iceberg'
 
 "disable broken extension
-let g:airline#extensions#languageclient#enabled =0
+" let g:airline#extensions#languageclient#enabled =0
 
 ""neoformat
 augroup fmt
@@ -249,6 +249,7 @@ let g:indentLine_char = '▏'
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
+let g:airline#extensions#ale#enabled = 1
 let g:ale_ignore_2_4_warnings = 1
 
 """Completions
@@ -256,12 +257,14 @@ set omnifunc=syntaxcomplete#Complete
 
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {}
+let g:LanguageClient_useVirtualText = 0
+let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
 let g:LanguageClient_serverCommands.reason = ['ocaml-language-server', '--stdio']
 let g:LanguageClient_serverCommands.ocaml = ['ocaml-language-server', '--stdio']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 
-let g:LanguageClient_loggingLevel = 'DEBUG'
+" let g:LanguageClient_loggingLevel = 'DEBUG'
 
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
