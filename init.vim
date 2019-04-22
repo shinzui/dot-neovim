@@ -261,14 +261,21 @@ let g:LanguageClient_useVirtualText = 0
 let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
 let g:LanguageClient_serverCommands.reason = ['ocaml-language-server', '--stdio']
+let g:LanguageClient_serverCommands.haskell = ['hie-wrapper']
+let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+
 let g:LanguageClient_serverCommands.ocaml = ['ocaml-language-server', '--stdio']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 
+
 " let g:LanguageClient_loggingLevel = 'DEBUG'
 
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<CR>
+" nnoremap <silent> gs :call LanguageClient#textDocument_documentSymbol()<CR>
+" nnoremap <silent> re :call LanguageClient#textDocument_references()<CR>
 
 "Use deoplete.
 let g:deoplete#enable_at_startup = 1
