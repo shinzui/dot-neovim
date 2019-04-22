@@ -142,6 +142,9 @@ Plug 'juliosueiras/vim-terraform-completion', { 'for': ['terraform'] }
 "Kubernetes
 Plug 'andrewstuart/vim-kubernetes'
 
+"Docker
+Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
+
 "databases
 Plug 'tpope/vim-db'
 
