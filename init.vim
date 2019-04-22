@@ -276,9 +276,16 @@ nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<CR>
 " nnoremap <silent> gs :call LanguageClient#textDocument_documentSymbol()<CR>
 " nnoremap <silent> re :call LanguageClient#textDocument_references()<CR>
+"
+
+"neocomplete
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 "Use deoplete.
 let g:deoplete#enable_at_startup = 1
+" let g:deoplete#auto_complete_delay = 0
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :

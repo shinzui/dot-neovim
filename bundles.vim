@@ -1,5 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+
+"completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'autozimu/LanguageClient-neovim', {
 \ 'branch': 'next',
@@ -7,6 +9,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ }
 Plug 'Shougo/echodoc.vim'
 Plug 'copy/deoplete-ocaml'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 "color schemes
 Plug 'cocopon/iceberg.vim'
