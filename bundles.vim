@@ -98,6 +98,9 @@ Plug 'andreypopp/fzf-merlin'
 Plug 'parsonsmatt/intero-neovim'
 Plug 'neovimhaskell/haskell-vim'
 
+"Nix
+Plug 'LnL7/vim-nix'
+
 "react
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascript.jsx']}
