@@ -267,8 +267,9 @@ let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
 let g:LanguageClient_serverCommands.ocaml = ['ocaml-language-server', '--stdio']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 
-
 " let g:LanguageClient_loggingLevel = 'DEBUG'
+" let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
+" let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
