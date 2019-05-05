@@ -75,6 +75,7 @@ Plug 'w0rp/ale'
 "git
 Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/gina.vim'
+Plug 'rhysd/git-messenger.vim'
 
 "JavaScript
 " Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
