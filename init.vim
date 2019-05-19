@@ -252,6 +252,8 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 let g:airline#extensions#ale#enabled = 1
 let g:ale_ignore_2_4_warnings = 1
+""disable for haskell 
+let g:ale_linters ={ 'haskell': [] }
 
 """Completions
 set omnifunc=syntaxcomplete#Complete
@@ -263,14 +265,14 @@ let g:LanguageClient_useFloatingHover = 1
 let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
 let g:LanguageClient_serverCommands.reason = ['ocaml-language-server', '--stdio']
 let g:LanguageClient_serverCommands.haskell = ['hie-wrapper']
-let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+let g:LanguageClient_rootMarkers = {'haskell': ['*.cabal', 'stack.yaml'] }
 
 let g:LanguageClient_serverCommands.ocaml = ['ocaml-language-server', '--stdio']
 let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
 
-" let g:LanguageClient_loggingLevel = 'DEBUG'
-" let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
-" let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
+let g:LanguageClient_loggingLevel = 'DEBUG'
+let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
+let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
@@ -362,7 +364,7 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> P     defx#do_action('open', 'pedit')
   nnoremap <silent><buffer><expr> K     defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> N     defx#do_action('new_multiple_files')
-  nnoremap <silent><buffer><expr> dd    defx#do_action('remove_trash')
+  nnoremap <silent><buffer><expr> dd    defx#do_action('remove')
   nnoremap <silent><buffer><expr> r     defx#do_action('rename')
   nnoremap <silent><buffer><expr> x     defx#do_action('execute_system')
   nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')
