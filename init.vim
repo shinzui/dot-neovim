@@ -1,7 +1,6 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-
 set nocompatible
 
 filetype off
@@ -70,6 +69,8 @@ set cursorline
 
 " Do not force writing modified files to switch buffers
 set hidden
+
+set updatetime=750
 
 let g:python2_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
@@ -252,7 +253,7 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 let g:airline#extensions#ale#enabled = 1
 let g:ale_ignore_2_4_warnings = 1
-""disable for haskell 
+""disable for haskell
 let g:ale_linters ={ 'haskell': [] }
 
 """Completions
