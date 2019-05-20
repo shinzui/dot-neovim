@@ -322,6 +322,14 @@ set completefunc=emoji#complete
 call gina#custom#command#option('status', '--opener', 'split')
 set diffopt+=vertical
 
+""git-gutter
+"Jump between hunks
+nmap <Leader>gn <Plug>GitGutterNextHunk
+nmap <Leader>gp <Plug>GitGutterPrevHunk
+" Hunk-add and hunk-revert for chunk staging
+nmap <Leader>ga <Plug>GitGutterStageHunk
+nmap <Leader>gu <Plug>GitGutterUndoHunk
+
 """terminal
 "Quit terminal
 " tnoremap <Esc> <C-\><C-n>
