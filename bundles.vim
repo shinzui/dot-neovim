@@ -72,10 +72,11 @@ Plug 'sbdchd/neoformat'
 "Linting
 Plug 'w0rp/ale'
 
-"git
+"git & github
 Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/gina.vim'
 Plug 'rhysd/git-messenger.vim'
+Plug 'AGhost-7/critiq.vim'
 
 "JavaScript
 " Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
