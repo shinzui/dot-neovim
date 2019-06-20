@@ -2,15 +2,26 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 
 "completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'autozimu/LanguageClient-neovim', {
-\ 'branch': 'next',
-\ 'do': 'bash install.sh',
-\ }
-Plug 'Shougo/echodoc.vim'
-Plug 'copy/deoplete-ocaml'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+function! InstallDeps(info)
+    if a:info.status == 'installed' || a:info.force
+        let extensions = [
+            \'coc-emmet',
+            \'coc-highlight',
+            \'coc-html',
+            \'coc-css',
+            \'coc-yaml',
+            \'coc-snippets',
+            \'coc-tsserver',
+            \'coc-json',
+            \'coc-yank',
+            \'coc-tailwindcss',
+             \'coc-eslint'
+            \]
+        call coc#util#install()
+        call coc#util#install_extension(extensions)
+    endif
+endfunction
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': function('InstallDeps')}
 
 "color schemes
 Plug 'cocopon/iceberg.vim'
@@ -131,9 +142,6 @@ Plug 'fatih/vim-go', { 'for' : ['go'] }
 
 "Protocol Buffers
 Plug 'uarun/vim-protobuf', { 'for': ['proto'] }
-
-"emoji
-Plug 'junegunn/vim-emoji'
 
 "Adds :Terraform command to run terraform. Also sets up _.tf, _.tfvars, and
 "\*.tfstate files to be highlighted

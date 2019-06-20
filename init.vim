@@ -70,7 +70,13 @@ set cursorline
 " Do not force writing modified files to switch buffers
 set hidden
 
-set updatetime=750
+" Better display for messages
+set cmdheight=2
+
+set updatetime=300
+
+"don't give |ins-completion-menu| messages.
+set shortmess+=c
 
 let g:python2_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
@@ -257,64 +263,97 @@ let g:ale_ignore_2_4_warnings = 1
 let g:ale_linters ={ 'haskell': [] }
 
 """Completions
-set omnifunc=syntaxcomplete#Complete
 
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {}
-let g:LanguageClient_useVirtualText = 0
-let g:LanguageClient_useFloatingHover = 1
-let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
-let g:LanguageClient_serverCommands.reason = ['ocaml-language-server', '--stdio']
-let g:LanguageClient_serverCommands.haskell = ['hie-wrapper']
-let g:LanguageClient_rootMarkers = {'haskell': ['*.cabal', 'stack.yaml'] }
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
-let g:LanguageClient_serverCommands.ocaml = ['ocaml-language-server', '--stdio']
-let g:LanguageClient_serverCommands.rust = ['rustup', 'run', 'stable', 'rls']
-
-let g:LanguageClient_loggingLevel = 'DEBUG'
-let g:LanguageClient_loggingFile =  expand('~/.local/share/nvim/LanguageClient.log')
-let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.log')
-
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<CR>
-" nnoremap <silent> gs :call LanguageClient#textDocument_documentSymbol()<CR>
-" nnoremap <silent> re :call LanguageClient#textDocument_references()<CR>
-"
-
-"neocomplete
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-"Use deoplete.
-let g:deoplete#enable_at_startup = 1
-" let g:deoplete#auto_complete_delay = 0
-
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#mappings#manual_complete()
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-inoremap <expr><C-h>
-      \ deoplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS>
-      \ deoplete#smart_close_popup()."\<C-h>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-let g:deoplete#ignore_sources = {}
-let g:deoplete#ignore_sources.ocaml = ['buffer', 'around', 'member', 'tag']
-call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Use `:Fold` to fold current buffer
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" use `:OR` for organize import of current buffer
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+command! -nargs=0 Format :call CocAction('format')
+
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+
+
+
 
 "fzf-merlin
 au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
-
-"vim-emoji
-set completefunc=emoji#complete
 
 """git
 "gina

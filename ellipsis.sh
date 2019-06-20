@@ -20,7 +20,7 @@ pkg.install() {
 }
 
 pkg.link() {
-  readonly files=(init.vim bundles.vim)
+  readonly files=(init.vim bundles.vim coc-settings.json)
 
   for file in "${files[@]}"; do
     echo "${file}"
