@@ -23,6 +23,9 @@ function! InstallDeps(info)
 endfunction
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': function('InstallDeps')}
 
+"snippets fro coc-snippets
+Plug 'honza/vim-snippets'
+
 "color schemes
 Plug 'cocopon/iceberg.vim'
 Plug 'arcticicestudio/nord-vim'
