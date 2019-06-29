@@ -354,6 +354,13 @@ nnoremap <silent> ,p  :<C-u>CocListResume<CR>
 imap <C-p> <Plug>(coc-snippets-expand)
 
 
+""CoC colors
+hi CocErrorSign  ctermfg=Red guifg=#bf616a
+hi CocWarningSign  ctermfg=Brown guifg=#D08770
+hi CocInfoSign  ctermfg=Yellow guifg=#EBCB8B
+hi CocHintSign  ctermfg=Blue guifg=#5E81AC
+
+
 "fzf-merlin
 au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
 
