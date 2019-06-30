@@ -117,6 +117,9 @@ Plug 'andreypopp/fzf-merlin'
 Plug 'parsonsmatt/intero-neovim'
 Plug 'neovimhaskell/haskell-vim'
 
+""Purescript
+Plug 'purescript-contrib/purescript-vim'
+
 "Nix
 Plug 'LnL7/vim-nix'
 
