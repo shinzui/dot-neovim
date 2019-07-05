@@ -66,6 +66,7 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 
+Plug 'wellle/targets.vim'
 
 Plug 'Yilin-Yang/vim-markbar'
 
