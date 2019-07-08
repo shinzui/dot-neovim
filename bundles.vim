@@ -115,7 +115,7 @@ Plug 'figitaki/vim-dune'
 Plug 'andreypopp/fzf-merlin'
 
 "haskell
-Plug 'parsonsmatt/intero-neovim'
+" Plug 'parsonsmatt/intero-neovim'
 Plug 'neovimhaskell/haskell-vim'
 
 ""Purescript
