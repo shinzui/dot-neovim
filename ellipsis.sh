@@ -26,6 +26,8 @@ pkg.link() {
     echo "${file}"
     fs.link_rfile "${file}" ~/.config/nvim/"${file}"
   done
+
+  fs.link_rfile binaries/terraform-lsp /usr/local/bin/
 }
 
 # pkg.push() {
