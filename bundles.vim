@@ -121,6 +121,9 @@ Plug 'neovimhaskell/haskell-vim'
 ""Purescript
 Plug 'purescript-contrib/purescript-vim'
 
+"Dhall
+Plug 'vmchale/dhall-vim'
+
 "Nix
 Plug 'LnL7/vim-nix'
 
