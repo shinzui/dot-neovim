@@ -28,6 +28,7 @@ pkg.link() {
   done
 
   fs.link_rfile binaries/terraform-lsp /usr/local/bin/
+  fs.link_rfile binaries/dhall-lsp-server /usr/local/bin/
 }
 
 # pkg.push() {
