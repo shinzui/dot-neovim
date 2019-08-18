@@ -174,4 +174,7 @@ Plug 'christoomey/vim-tmux-navigator'
 "Utility to generate color scheme for tmux
 Plug 'edkolev/tmuxline.vim'
 
+"Vim util
+Plug 'tweekmonster/startuptime.vim'
+
 call plug#end()
