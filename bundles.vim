@@ -15,7 +15,8 @@ function! InstallDeps(info)
             \'coc-json',
             \'coc-yank',
             \'coc-tailwindcss',
-             \'coc-eslint'
+             \'coc-eslint',
+            \'coc-rls'
             \]
         call coc#util#install()
         call coc#util#install_extension(extensions)
