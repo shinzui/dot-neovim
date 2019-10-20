@@ -310,6 +310,11 @@ function! s:show_documentation()
   endif
 endfunction
 
+nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
+nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
+nmap <silent><leader>fj <Plug>(coc-float-jump)
+nmap <silent><leader>fh <Plug>(coc-float-hide)
+
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
