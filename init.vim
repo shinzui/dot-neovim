@@ -359,13 +359,11 @@ nnoremap <silent> ,p  :<C-u>CocListResume<CR>
 " Use <C-p> for trigger snippet expand.
 imap <C-p> <Plug>(coc-snippets-expand)
 
-
 ""CoC colors
 hi CocErrorSign  ctermfg=Red guifg=#bf616a
 hi CocWarningSign  ctermfg=Brown guifg=#D08770
 hi CocInfoSign  ctermfg=Yellow guifg=#EBCB8B
 hi CocHintSign  ctermfg=Blue guifg=#5E81AC
-
 
 "fzf-merlin
 au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
@@ -378,18 +376,18 @@ set diffopt+=vertical
 
 ""git-gutter
 "Jump between hunks
-nmap <Leader>gn <Plug>GitGutterNextHunk
-nmap <Leader>gp <Plug>GitGutterPrevHunk
+nmap <Leader>gn <Plug>(GitGutterNextHunk)
+nmap <Leader>gp <Plug>(GitGutterPrevHunk)
 " Hunk-add and hunk-revert for chunk staging
-nmap <Leader>ga <Plug>GitGutterStageHunk
-nmap <Leader>gu <Plug>GitGutterUndoHunk
+nmap <Leader>ga <Plug>(GitGutterStageHunk)
+nmap <Leader>gu <Plug>(GitGutterUndoHunk)
+
 " Use fontawesome icons as signs
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '>'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '^'
 let g:gitgutter_sign_modified_removed = '<'
-
 
 """terminal
 "Quit terminal
