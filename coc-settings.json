@@ -22,7 +22,9 @@
         "lhs",
         "haskell"
       ],
-      "initializationOptions": {},
+      "initializationOptions": {
+        "languageServerHaskell": {}
+      },
       "settings": {
         "languageServerHaskell": {
           "hlintOn": true,
