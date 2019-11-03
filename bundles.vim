@@ -119,6 +119,7 @@ Plug 'andreypopp/fzf-merlin'
 "haskell
 " Plug 'parsonsmatt/intero-neovim'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'vmchale/hs-conceal'
 
 ""Purescript
 Plug 'purescript-contrib/purescript-vim'
