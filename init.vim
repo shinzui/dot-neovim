@@ -251,6 +251,7 @@ let g:neoformat_enabled_handlebars = []
 let g:neoformat_enabled_yaml = [ 'prettier' ]
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 let g:neoformat_enabled_html = []
+let g:neoformat_enabled_haskell = []
 let g:neoformat_only_msg_on_error = 1
 " let g:neoformat_enabled_yaml = []
 
