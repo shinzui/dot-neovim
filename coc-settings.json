@@ -1,4 +1,5 @@
 {
+  "coc.preferences.colorSupport": false,
   "javascript.suggestionActions.enabled": false,
   "languageserver": {
     "ocaml": {
