@@ -258,6 +258,7 @@ let g:neoformat_enabled_scss = []
 let g:neoformat_only_msg_on_error = 1
 " let g:neoformat_enabled_yaml = []
 
+
 ""vim-js-pretty-template
 call jspretmpl#register_tag('gql', 'graphql')
 
@@ -271,8 +272,9 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 0
 let g:airline#extensions#ale#enabled = 1
 let g:ale_ignore_2_4_warnings = 1
-""disable for haskell
+""disable for haskell and reason
 let g:ale_linters ={ 'haskell': [] }
+let g:ale_linters ={ 'reason': [] }
 
 """Completions
 
