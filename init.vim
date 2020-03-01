@@ -252,6 +252,9 @@ let g:neoformat_enabled_yaml = [ 'prettier' ]
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 let g:neoformat_enabled_html = []
 let g:neoformat_enabled_haskell = []
+let g:neoformat_enabled_ruby = []
+let g:neoformat_enabled_css = []
+let g:neoformat_enabled_scss = []
 let g:neoformat_only_msg_on_error = 1
 " let g:neoformat_enabled_yaml = []
 
