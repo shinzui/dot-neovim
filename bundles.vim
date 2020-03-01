@@ -17,7 +17,8 @@ function! InstallDeps(info)
             \'coc-tailwindcss',
              \'coc-eslint',
             \'coc-rls',
-            \'coc-java'
+            \'coc-java',
+            \'coc-reason'
             \]
         call coc#util#install()
         call coc#util#install_extension(extensions)
