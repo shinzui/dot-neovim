@@ -113,7 +113,7 @@ nnoremap <leader>W :%!git stripspace<CR>
 
 "bind control-l to hashrocket
 imap <C-l> =><Space>
-imap <C-k> -><Space>
+" imap <C-k> -><Space>
 
 "save file
 nnoremap <Leader>w :w<CR>
