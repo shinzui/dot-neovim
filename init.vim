@@ -234,6 +234,14 @@ augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+let g:neoformat_ocaml_ocamlformat = {
+\ 'exe': 'ocamlformat',
+        \ 'no_append': 1,
+        \ 'stdin': 1,
+        \ 'args': ['--name', '"%:p"', '--profile', 'compact','-']
+        \}
+
 autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
 autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 101\ --no-semi\ --trailing-comma\ es5
 " autocmd FileType dune set formatprg=dune\ unstable-fmt\ --inplace
