@@ -1,6 +1,7 @@
 {
   "coc.preferences.colorSupport": false,
   "javascript.suggestionActions.enabled": false,
+  "coc.preferences.formatOnSaveFiletypes": ["reason"],
   "languageserver": {
     "ocaml": {
       "command": "ocaml-language-server",
@@ -8,7 +9,12 @@
         "--stdio"
       ],
       "filetypes": [
-        "ocaml",
+        "ocaml"
+      ]
+    },
+    "reason": {
+      "command": "reason-language-server",
+      "filetypes": [
         "reason"
       ]
     },
