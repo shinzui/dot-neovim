@@ -78,6 +78,9 @@ Plug 'Shougo/junkfile.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
+" Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vista.vim'
+
 "commenting
 Plug 'tomtom/tcomment_vim'
 
@@ -121,7 +124,8 @@ Plug 'figitaki/vim-dune'
 "haskell
 " Plug 'parsonsmatt/intero-neovim'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'vmchale/hs-conceal'
+" Plug 'vmchale/hs-conceal'
+Plug 'monkoose/fzf-hoogle.vim'
 
 ""Purescript
 Plug 'purescript-contrib/purescript-vim'
