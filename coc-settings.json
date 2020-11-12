@@ -1,7 +1,9 @@
 {
   "coc.preferences.colorSupport": false,
   "javascript.suggestionActions.enabled": false,
-  "coc.preferences.formatOnSaveFiletypes": ["reason"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "reason"
+  ],
   "languageserver": {
     "ocaml": {
       "command": "ocaml-language-server",
@@ -19,7 +21,7 @@
       ]
     },
     "haskell": {
-      "command": "hie-wrapper",
+      "command": "haskell-language-server-wrapper",
       "args": [
         "--lsp"
       ],
