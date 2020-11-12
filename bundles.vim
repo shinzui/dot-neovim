@@ -89,7 +89,7 @@ Plug 'sbdchd/neoformat'
 Plug 'sdiehl/vim-ormolu'
 
 "Linting
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 "git & github
 Plug 'airblade/vim-gitgutter'
@@ -116,7 +116,7 @@ Plug 'hail2u/vim-css3-syntax' "css
 "ocaml/reason
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'figitaki/vim-dune'
-Plug 'andreypopp/fzf-merlin'
+" Plug 'andreypopp/fzf-merlin'
 
 "haskell
 " Plug 'parsonsmatt/intero-neovim'

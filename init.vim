@@ -5,6 +5,9 @@ set nocompatible
 
 filetype off
 
+"Need to diable ale LSP before plugins are loaded
+let g:ale_disable_lsp = 1
+
 if filereadable(expand("~/.config/nvim/bundles.vim"))
   source ~/.config/nvim/bundles.vim
 endif
