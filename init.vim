@@ -89,6 +89,7 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 set termguicolors
 colorscheme nord
 let g:nord_italic = 1
+let g:nord_bold = 1
 let g:nord_underline = 1
 let g:nord_italic_comments = 1
 let g:nord_cursor_line_number_background = 1
@@ -116,7 +117,7 @@ nnoremap <leader>W :%!git stripspace<CR>
 
 "bind control-l to hashrocket
 imap <C-l> =><Space>
-" imap <C-k> -><Space>
+imap <C-f> -><Space>
 
 "save file
 nnoremap <Leader>w :w<CR>
@@ -245,8 +246,8 @@ let g:neoformat_ocaml_ocamlformat = {
         \ 'args': ['--name', '"%:p"', '--profile', 'compact','-']
         \}
 
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 100\ --no-semi\ --trailing-comma\ es5
-autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 101\ --no-semi\ --trailing-comma\ es5
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 100\ --no-semi\ --arrow-parens\ avoid\ --trailing-comma\ es5
+autocmd FileType javascript.jsx set formatprg=prettier\ --stdin\ --parser\ flow\ --single-quote\ --print-width\ 100\ --arrow-parens\ avoid\ --no-semi\ --trailing-comma\ es5
 " autocmd FileType dune set formatprg=dune\ unstable-fmt\ --inplace
 autocmd FileType javascript JsPreTmpl
 autocmd FileType graphql set formatprg=prettier
@@ -268,7 +269,6 @@ let g:neoformat_enabled_css = []
 let g:neoformat_enabled_scss = []
 let g:neoformat_only_msg_on_error = 1
 " let g:neoformat_enabled_yaml = []
-
 
 ""vim-js-pretty-template
 call jspretmpl#register_tag('gql', 'graphql')
@@ -389,6 +389,22 @@ hi CocWarningSign  ctermfg=Brown guifg=#D08770
 hi CocInfoSign  ctermfg=Yellow guifg=#EBCB8B
 hi CocHintSign  ctermfg=Blue guifg=#5E81AC
 
+
+"""vista 
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'coc'
+
+let g:vista_ctags_cmd = {
+      \ 'haskell': 'hasktags -x -o - -c',
+      \ }
+let g:vista#renderer#enable_icon = 1
+let g:vista_fzf_preview = ['right:50%']
+let g:vista_echo_cursor_strategy = 'floating_win'
+let g:vista_close_on_jump = 1
+
+
+
+
 "fzf-merlin
 au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
 
@@ -437,7 +453,7 @@ call defx#custom#option('_', {
 
 call defx#custom#column('filename', {
       \ 'min_width': 5,
-      \ 'max_width': 25,
+      \ 'max_width': 35,
       \ })
 
 " Close defx if it's the only buffer left in the window
@@ -528,10 +544,19 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 """Haskell
 
-" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
-let s:opam_share_dir = system("opam config var share")
-let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
 
+augroup HoogleMaps
+  autocmd!
+  autocmd FileType haskell nnoremap <buffer> <space>hh :Hoogle <C-r><C-w><CR>
+augroup END
+
+let g:hoogle_open_link="open"
+
+
+" ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
+" let s:opam_share_dir = system("opam config var share")
+" let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
+"
 let s:opam_configuration = {}
 
 function! OpamConfOcpIndent()
@@ -550,12 +575,26 @@ function! OpamConfMerlin()
 endfunction
 let s:opam_configuration['merlin'] = function('OpamConfMerlin')
 
-" let s:opam_packages = ["ocp-indent", "ocp-index", "merlin"]
-let s:opam_packages = ["ocp-index", "merlin"]
-let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
-let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
-for tool in s:opam_packages
-  " Respect package order (merlin should be after ocp-index)
-    call s:opam_configuration[tool]()
-endfor
-" ## end of OPAM user-setup addition for vim / base ## keep this line
+" let s:opam_packages = ["ocp-index", "merlin"]
+" let s:opam_check_cmdline = ["opam list --installed --short --safe --color=never"] + s:opam_packages
+" let s:opam_available_tools = split(system(join(s:opam_check_cmdline)))
+" echom "configuring ocaml"
+" for tool in s:opam_packages
+"   " Respect package order (merlin should be after ocp-index)
+"   call s:opam_configuration[tool]()
+" endfor
+
+function! ConfigureOcaml()
+  let l:opam_share_dir = system("opam config var share")
+  echom l:opam_share_dir
+  let l:opam_share_dir = substitute(l:opam_share_dir, '[\r\n]*$', '', '')
+  execute "set rtp+=" . l:opam_share_dir . "/ocp-index/vim"
+  let l:dir = l:opam_share_dir . "/merlin/vim"
+  execute "set rtp+=" . l:dir
+endfunction
+" call ConfigureOcaml()
+
+augroup ocaml_merlin
+  autocmd!
+  " autocmd FileType ocaml call ConfigureOcaml()
+augroup END
