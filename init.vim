@@ -34,6 +34,9 @@ set ignorecase
 set smartcase
 set gdefault
 
+"enable mouse in normal mode
+set mouse=n
+
 " Enable tab completion. First tab shows all matches, second tab cycles through them
 set wildmenu
 set wildmode=list:longest,full
