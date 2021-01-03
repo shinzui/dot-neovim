@@ -89,7 +89,7 @@ Plug 'simnalamburt/vim-mundo'
 
 "Formatting
 Plug 'sbdchd/neoformat'
-Plug 'sdiehl/vim-ormolu'
+" Plug 'sdiehl/vim-ormolu'
 
 "Linting
 " Plug 'w0rp/ale'
