@@ -15,7 +15,7 @@
       ]
     },
     "reason": {
-      "command": "reason-language-server",
+      "command": "ocamllsp",
       "filetypes": [
         "reason"
       ]
@@ -58,7 +58,12 @@
         "bower.json",
         "psc-package.json",
         "spago.dhall"
-      ]
+      ],
+      "settings": {
+        "purescript": {
+          "addSpagoSources": true
+        }
+      }
     },
     "terraform": {
       "command": "terraform-lsp",
