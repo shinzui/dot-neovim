@@ -173,6 +173,9 @@ Plug 'andrewstuart/vim-kubernetes'
 "Docker
 Plug 'ekalinin/Dockerfile.vim', { 'for': ['Dockerfile'] }
 
+"digraphs & unicode
+Plug 'chrisbra/unicode.vim'
+
 "databases
 Plug 'tpope/vim-db'
 
