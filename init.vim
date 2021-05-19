@@ -210,6 +210,9 @@ map <Leader>j <Plug>(edgemotion-j)
 map y <Plug>(operator-flashy)
 nmap Y <Plug>(operator-flashy)$
 
+""far
+let g:far#source = 'rgnvim'
+
 ""is.vim & vim-asterisk
 map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
 map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
@@ -267,6 +270,7 @@ let g:neoformat_enabled_yaml = [ 'prettier' ]
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 let g:neoformat_enabled_html = []
 let g:neoformat_enabled_haskell = []
+" let g:neoformat_enabled_haskell = ['ormolu']
 let g:neoformat_enabled_ruby = []
 let g:neoformat_enabled_css = []
 let g:neoformat_enabled_scss = []
@@ -354,8 +358,13 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)
+
+nmap <leader>al  <Plug>(coc-codelens-action)
+
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+nnoremap <silent> <Leader>fs  :<C-u>CocFzfList symbols<cr>
 
 " Use `:Fold` to fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -392,8 +401,7 @@ hi CocWarningSign  ctermfg=Brown guifg=#D08770
 hi CocInfoSign  ctermfg=Yellow guifg=#EBCB8B
 hi CocHintSign  ctermfg=Blue guifg=#5E81AC
 
-
-"""vista 
+"""vista
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_default_executive = 'coc'
 
@@ -404,9 +412,6 @@ let g:vista#renderer#enable_icon = 1
 let g:vista_fzf_preview = ['right:50%']
 let g:vista_echo_cursor_strategy = 'floating_win'
 let g:vista_close_on_jump = 1
-
-
-
 
 "fzf-merlin
 au FileType ocaml nnoremap <C-n> <Esc>:FZFMerlinOutline<CR>
@@ -547,14 +552,12 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 """Haskell
 
-
 augroup HoogleMaps
   autocmd!
   autocmd FileType haskell nnoremap <buffer> <space>hh :Hoogle <C-r><C-w><CR>
 augroup END
 
 let g:hoogle_open_link="open"
-
 
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 " let s:opam_share_dir = system("opam config var share")

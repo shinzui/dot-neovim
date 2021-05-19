@@ -26,6 +26,8 @@ function! InstallDeps(info)
 endfunction
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': function('InstallDeps')}
 
+Plug 'antoinemadec/coc-fzf'
+
 "snippets fro coc-snippets
 Plug 'honza/vim-snippets'
 
@@ -78,7 +80,7 @@ Plug 'Shougo/junkfile.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
-" Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key'
 Plug 'liuchengxu/vista.vim'
 
 "commenting
